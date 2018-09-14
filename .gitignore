@@ -36,6 +36,10 @@ build/Release
 node_modules/
 jspm_packages/
 ios/
+android/.gradle/
+android/.idea/
+android/app/build/
+android/build/
 
 # TypeScript v1 declaration files
 typings/

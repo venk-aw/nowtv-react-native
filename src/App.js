@@ -3,34 +3,60 @@ import {
   StyleSheet,
   Text,
   View,
-  NativeModules
+  NativeModules,
+  FlatList
 } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import getChatLog from './service'
+import {getChatLog, getUsers} from './service'
+import ListItem from './ListItem';
 
 class App extends Component {
+  state = {
+    timestamp: null
+  };
+
   componentDidMount(){
-    console.log("NativeModules", NativeModules)
+    NativeModules.RNMyTimestamp.getTimeStamp((timestamp) => {
+      this.setState({
+        timestamp
+      })
+    }, (err) => { console.warn('Failed to get timestamp', err); });
+    this.props.getChatLog()
+    this.props.getUsers()
   }
 
   render() {
+    const {messages, users} = this.props
+    const {timestamp} = this.state
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Hello
-        </Text>
+        {timestamp && <View style={styles.welcome}>
+            <Text>TimeStamp: {timestamp}</Text>
+            <Text>Date: {Date(parseInt(timestamp))}</Text>
+          </View>
+        }
+        <FlatList
+          data={messages}
+          renderItem={item => <ListItem
+            {...item.item}
+            user={users[item.item.userId]}
+            getUser={this.getUserById} /> }
+          keyExtractor={item => item.id} />
       </View>
     );
   }
 }
 
 const mapStateToProps = state => {
-  return {};
+  return {
+    messages: state.messages || [],
+    users: state.users || {}
+  };
 };
 
-const mapDispatchToProps = dispatch => bindActionCreators({ getChatLog }, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators({ getChatLog, getUsers }, dispatch);
 
 export default connect(
   mapStateToProps,
@@ -43,11 +69,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#F5FCFF'
   },
   welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+    margin: 10
   }
 });
