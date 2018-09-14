@@ -1,0 +1,249 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListItem should not render the image if no URL provided 1`] = `
+<View
+  accessible={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "borderBottomWidth": 1,
+      "flexDirection": "row",
+      "minHeight": 48,
+      "paddingHorizontal": 8,
+      "paddingVertical": 4,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderColor": "#dddddd",
+        "borderRadius": 24,
+        "borderWidth": 1,
+        "height": 48,
+        "justifyContent": "center",
+        "overflow": "hidden",
+        "width": 48,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "paddingLeft": 4,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      Lorem ipsum
+    </Text>
+    <View
+      style={
+        Object {
+          "minHeight": 18,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem should render the image 1`] = `
+<View
+  accessible={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "borderBottomWidth": 1,
+      "flexDirection": "row",
+      "minHeight": 48,
+      "paddingHorizontal": 8,
+      "paddingVertical": 4,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderColor": "#dddddd",
+        "borderRadius": 24,
+        "borderWidth": 1,
+        "height": 48,
+        "justifyContent": "center",
+        "overflow": "hidden",
+        "width": 48,
+      }
+    }
+  >
+    <Image
+      source={
+        Object {
+          "uri": "http://dummyimage.com/100x100.png/5fa2dd/ffffff",
+        }
+      }
+      style={
+        Object {
+          "height": 46,
+          "width": 46,
+        }
+      }
+    />
+  </View>
+  <View
+    style={
+      Object {
+        "paddingLeft": 4,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      Lorem ipsum
+    </Text>
+    <View
+      style={
+        Object {
+          "minHeight": 18,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem should render without exploding 1`] = `
+<View
+  accessible={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "borderBottomWidth": 1,
+      "flexDirection": "row",
+      "minHeight": 48,
+      "paddingHorizontal": 8,
+      "paddingVertical": 4,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderColor": "#dddddd",
+        "borderRadius": 24,
+        "borderWidth": 1,
+        "height": 48,
+        "justifyContent": "center",
+        "overflow": "hidden",
+        "width": 48,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "paddingLeft": 4,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    />
+    <View
+      style={
+        Object {
+          "minHeight": 18,
+        }
+      }
+    />
+  </View>
+</View>
+`;
+
+exports[`ListItem should render without failure even if no user is passed 1`] = `
+<View
+  accessible={true}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    Object {
+      "alignItems": "center",
+      "borderBottomWidth": 1,
+      "flexDirection": "row",
+      "minHeight": 48,
+      "paddingHorizontal": 8,
+      "paddingVertical": 4,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "borderColor": "#dddddd",
+        "borderRadius": 24,
+        "borderWidth": 1,
+        "height": 48,
+        "justifyContent": "center",
+        "overflow": "hidden",
+        "width": 48,
+      }
+    }
+  />
+  <View
+    style={
+      Object {
+        "paddingLeft": 4,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+    >
+      Lorem ipsum
+    </Text>
+    <View
+      style={
+        Object {
+          "minHeight": 18,
+        }
+      }
+    />
+  </View>
+</View>
+`;

@@ -37,7 +37,6 @@ export default class ListItem extends Component {
     showUserDetails: false
   }
 
-  // displaying email as simple text for now
   onMessageSelect = () => {
     this.setState({
       showUserDetails: true,
